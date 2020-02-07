@@ -45,5 +45,17 @@ module.exports = {
             console.log(e)
             return res.send({status:'failed', message: e.message});
         }
+    },
+
+    async list(req, res){
+        try{
+            stock = req.body;
+            result = await Stock.selectAll('stocks')
+            
+            return res.send({status:'success', data: result})
+        }catch(e){
+            console.log(e)
+            return res.send({status:'failed', message: e.message});
+        }
     }
 }
