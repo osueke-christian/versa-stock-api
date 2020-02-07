@@ -15,6 +15,7 @@ const {controllers} = require('../bootstrap/autoload');
 module.exports = function(){
     controllers.then(ctrl=>{
         router.post( '/stock/create', ctrl.StockController.add );
+        router.patch( '/stock/:stockId', ctrl.StockController.update);
     }).catch(error=>{
         console.log(error.message);
     })

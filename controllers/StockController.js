@@ -17,5 +17,20 @@ module.exports = {
             console.log(e)
             return res.send({status:'failed', message: e.message});
         }
+    },
+
+    async update(req, res){
+        try{
+            let stock = req.body;
+            stock['id'] = req.params.stockId;
+            result = await Stock.update('stocks', stock.id,
+                ['product', 'quantity', 'price', 'updated_at'],
+                [stock.product, stock.quantity, stock.price, new Date()]
+            )
+            return res.send({status:'success', data:stock})
+        }catch(e){
+            console.log(e)
+            return res.send({status:'failed', message: e.message});
+        }
     }
 }
