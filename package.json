@@ -1,0 +1,45 @@
+{
+  "name": "versa-stock-api",
+  "version": "1.0.0",
+  "description": "Versa Nodejs Stock CRUD API",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "config": "^3.2.4",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^3.21.2",
+    "morgan": "^1.9.1",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "airbnb": "0.0.2",
+    "eslint": "^6.6.0",
+    "jasmin": "0.0.2",
+    "mocha": "^6.2.2",
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osueke-christian/versa-stock-api.git"
+  },
+  "keywords": [
+    "DevC",
+    "Andela",
+    "Nodejs",
+    "Node",
+    "Osueke",
+    "Christian"
+  ],
+  "author": "Christian Osueke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osueke-christian/versa-stock-api/issues"
+  },
+  "homepage": "https://github.com/osueke-christian/versa-stock-api#readme"
+}
