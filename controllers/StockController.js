@@ -32,5 +32,18 @@ module.exports = {
             console.log(e)
             return res.send({status:'failed', message: e.message});
         }
+    },
+
+    async delete(req, res){
+        try{
+            stock = req.body;
+            stock['id'] = req.params.stockId;
+            result = await Stock.delete('stocks', stock.id)
+            
+            return res.send({status:'success', data:result})
+        }catch(e){
+            console.log(e)
+            return res.send({status:'failed', message: e.message});
+        }
     }
 }

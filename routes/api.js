@@ -16,6 +16,7 @@ module.exports = function(){
     controllers.then(ctrl=>{
         router.post( '/stock/create', ctrl.StockController.add );
         router.patch( '/stock/:stockId', ctrl.StockController.update);
+        router.delete( '/stock/:stockId', ctrl.StockController.delete);
     }).catch(error=>{
         console.log(error.message);
     })
