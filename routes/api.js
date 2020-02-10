@@ -15,8 +15,8 @@ const {controllers} = require('../bootstrap/autoload');
 module.exports = function(){
     controllers.then(ctrl=>{
         router.post( '/stock/create', ctrl.StockController.add );
-        router.patch( '/stock/:stockId', ctrl.StockController.update);
-        router.delete( '/stock/:stockId', ctrl.StockController.delete);
+        router.patch( '/stock/update', ctrl.StockController.update);
+        router.delete( '/stock/delete', ctrl.StockController.delete);
         router.get( '/stocks', ctrl.StockController.list);
         router.get( '/', ctrl.StockController.list);
     }).catch(error=>{
